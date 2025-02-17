@@ -1,0 +1,43 @@
+/* KPI Section */
+.kpi-section {
+    flex: 2; /* Make the section take up more space */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap between elements */
+    justify-content: flex-start;
+    padding: 2rem; /* Added padding for better spacing */
+  }
+  
+
+  
+  /* Adjusting the grid layout for 2x2 formation */
+  .kpi-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+    gap: 1.5rem; /* Increased gap between cards */
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Make the KPI cards larger */
+  .kpi-card {
+    background-color: #333;
+    border-radius: 12px; /* Slightly larger border radius */
+    padding: 2rem; /* Increased padding for larger cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increased shadow for a more prominent look */
+    color: white; /* Text color for better readability */
+    font-size: 1.2rem; /* Increased font size for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Increased height of the cards */
+  }
+  
+  /* Add hover effect to the cards */
+  .kpi-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    transition: transform 0.3s ease;
+  }
+  
