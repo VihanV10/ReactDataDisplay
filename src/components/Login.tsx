@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import './Auth.css'; // Import custom CSS for styling
@@ -15,6 +15,16 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/dashboard"); // Redirect to dashboard after login
+    } catch (err: any) {
+      setError(err.message);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      navigate("/dashboard"); // Redirect to dashboard after Google login
     } catch (err: any) {
       setError(err.message);
     }
@@ -44,6 +54,12 @@ export default function Login() {
             Login
           </button>
         </form>
+
+        <button onClick={handleGoogleLogin} className="google-btn">
+          <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo" />
+          Sign in with Google
+        </button>
+
         <p className="register-link">
           Don't have an account? <a href="/register">Register</a>
         </p>
