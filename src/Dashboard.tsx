@@ -18,20 +18,9 @@ import './Variable.css';
 
 const Dashboard: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Sample chart data
-  const [data] = useState<any[]>([
-    { name: 'Jan', uv: 4000, pv: 2400, amt: 2400 },
-    { name: 'Feb', uv: 3000, pv: 1398, amt: 2210 },
-    { name: 'Mar', uv: 2000, pv: 9800, amt: 2290 },
-    { name: 'Apr', uv: 2780, pv: 3908, amt: 2000 },
-    { name: 'May', uv: 1890, pv: 4800, amt: 2181 },
-    { name: 'Jun', uv: 2390, pv: 3800, amt: 2500 },
-    { name: 'Jul', uv: 3490, pv: 4300, amt: 2100 },
-  ]);
-
+ 
   // Whether the "Edit Variables" popup is shown
   const [showEditMenu, setShowEditMenu] = useState(false);
 
@@ -61,10 +50,7 @@ const Dashboard: React.FC = () => {
     return () => unsubscribe();
   }, [navigate]);
 
-  // Toggle dark/light theme
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
-  };
+
 
   // Toggle visibility of chart lines
   const handleVariableToggle = (variable: string) => {
@@ -82,7 +68,7 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className={`dashboard-container ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+    <div className={`dashboard-container ${ 'dark-theme'}`}>
       {/* Navbar on the left side */}
       <div className="sidebar">
       <div className="sidebar-item">
@@ -174,7 +160,7 @@ const Dashboard: React.FC = () => {
         </h3>
         <div className="content-section">
         
-        <ChartContainer variablesVisible={variablesVisible} />
+        <ChartContainer  />
         <div className="kpi-section">
         <h3 style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         Key Performance Indicators
