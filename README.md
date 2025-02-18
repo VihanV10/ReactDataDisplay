@@ -26,9 +26,13 @@ npm install react-icons
 # Features Implemented
 
 Graph Visualization: Used Recharts to create a dynamic and interactive graph.
+
 Icons & Navigation: Integrated icons for enhanced UI and utilized React Router DOM for seamless navigation between pages.
+
 Authentication: Implemented Firebase Authentication for secure user login and authentication.
+
 State Management: Leveraged React-Redux to manage state efficiently and allow dynamic updates of key variables.
+
 Reusable Components: Designed repeatable KPI cards to ensure consistency and reusability across the dashboard.
 
 # Technical Decisions & Trade-offs
