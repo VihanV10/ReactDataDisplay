@@ -21,7 +21,10 @@ npm install recharts
 # Install Icons (assuming you mean React Icons)
 npm install react-icons
 
+
+
 Features Implemented
+
 Graph Visualization: Used Recharts to create a dynamic and interactive graph.
 Icons & Navigation: Integrated icons for enhanced UI and utilized React Router DOM for seamless navigation between pages.
 Authentication: Implemented Firebase Authentication for secure user login and authentication.
