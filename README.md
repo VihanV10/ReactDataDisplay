@@ -40,7 +40,7 @@ Styling Approach: Considered using Tailwind CSS but opted for CSS due to the spe
 Component Structure: While structuring the dashboard, I initially underestimated the complexity of styling. As a result, some components could have been better modularized to improve maintainability and readability.
 
 # Known Limitations
-The component splitting in the dashboard could have been more refined. Anticipating fewer style variations led to suboptimal structuring, which might affect scalability in future iterations.
+The component splitting in the dashboard could have been more refined. Anticipating fewer style variations led to suboptimal structuring, which might affect scalability in future iterations. Some components do look different from what was assigned however this was due to both working only with dummy data and limited time spent working on the app.
 
 # Time Spent
 The entire implementation, including development and documentation, took approximately 2 hours and 30 minutes.
